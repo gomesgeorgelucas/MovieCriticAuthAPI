@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:h2:tcp://localhost/~/test
+    url: jdbc:h2:tcp://localhost:9090/mem:mcdb
     username: sa
-    password: password
+    password:
     driver-class-name: org.h2.Driver
   h2:
     console:
@@ -11,7 +11,7 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
@@ -19,6 +19,6 @@ spring:
   main:
     banner-mode: off
 server:
-  port: 8080
+  port: 8081
   error:
     include-stacktrace: never
